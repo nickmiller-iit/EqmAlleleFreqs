@@ -197,7 +197,7 @@ class Deme:
             self.neighbours[n].fillPool(self.genotypeDensities)
         for n in range(len(self.neighbours)):
             for g in range(len(self.genotypeDensities)):
-                self.genotypeDensities[g] -= self.neighbours[n].migrantpool[g]
+                self.genotypeDensities[g] -= self.neighbours[n].migrantPool[g]
 
     def sendMigrants(self):
         """Sends migrants to all neighbours
@@ -208,3 +208,4 @@ class Deme:
             self.neighbours[n].sendMigrants()
             self.neighbours[n].emptyPool()
             
+
